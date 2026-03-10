@@ -1,0 +1,115 @@
+🎬 ANIMEVERSE - ПОВНА ЗБІРКА СТРУКТУРА ПРОЕКТУ
+================================================
+
+📁 anime-full-stack/
+│
+├── 🎬 FRONTEND (React)
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── AnimeViewer.jsx     ← Основний компонент
+│   │   ├── App.jsx                  ← Root компонент
+│   │   └── main.jsx                 ← Entry point
+│   ├── index.html                   ← HTML сторінка
+│   ├── vite.config.js              ← Vite конфіг
+│   └── package.json                 ← Frontend залежности (React, Vite)
+│
+├── 🔧 BACKEND (Node.js API)
+│   ├── api-server.js               ← REST API сервер
+│   │   └── Endpoints:
+│   │       - GET /api/anime        ← Список аніме
+│   │       - GET /api/anime/:id    ← Конкретне аніме
+│   │       - GET /api/search       ← Пошук
+│   │       - GET /api/genres       ← Жанри
+│   │       - GET /api/trending     ← Популярне
+│   │       - GET /api/tts          ← Озвучка (TTS)
+│   │       - GET /api/health       ← Статус
+│   │
+│   └── backend-package.json        ← Backend залежности
+│       (скопіюй як package.json)
+│
+├── 🤖 TELEGRAM BOT
+│   ├── telegram-bot.js             ← Telegram Bot
+│   │   └── Команди:
+│   │       - /start                ← Меню
+│   │       - /search <назва>       ← Пошук
+│   │       - /trending             ← Популярне
+│   │       - /site                 ← Лінк
+│   │       - /help                 ← Допомога
+│   │
+│   └── Работает на Railway паралельно з API
+│
+├── ⚙️ КОНФІГИ
+│   ├── .env                        ← Переменні (СКОПІЮЙ З .env.example)
+│   ├── .env.example                ← Приклад конфіга
+│   ├── Dockerfile                  ← Docker для Railway
+│   ├── railway.json                ← Railway конфіг
+│   ├── .gitignore                  ← Git конфіг
+│   └── network-info.js             ← Інформація про мережу
+│
+├── 📚 ДОКУМЕНТАЦІЯ
+│   ├── QUICK_START.md              ⭐ ПОЧНИ ВІД СЮДИ!
+│   ├── COMPLETE_SETUP.md           ← Повна інструкція
+│   ├── DEPLOY_GUIDE.md             ← Деплой на Railway/Vercel
+│   ├── README.md                   ← Основна інформація
+│   ├── START_HERE.md               ← Швидкий старт
+│   ├── INSTALL.md                  ← Установка
+│   ├── PHONE_FULL_GUIDE.md         ← Доступ з телефону
+│   ├── TESTING_GUIDE.md            ← Тестування API
+│   └── FRONTEND_ONLY.md            ← Інформація про фронтенд
+│
+└── 📝 ІНШІ ФАЙЛИ
+    ├── dist/                       ← Збірка фронтенду (після npm run build)
+    ├── node_modules/               ← Залежности (після npm install)
+    └── src/components/             ← React компоненти
+
+═══════════════════════════════════════════════════════════════
+
+📋 ЯК КОРИСТУВАТИСЯ ЦІЄЮ ЗБІРКОЮ:
+
+1️⃣ ЛОКАЛЬНЕ ТЕСТУВАННЯ:
+   npm install                      ← Встановити залежности
+   npm start                        ← Запустити API (порт 3000)
+   npm run bot                      ← Запустити Bot (потребує TOKEN)
+   npm run dev                      ← Запустити Frontend (порт 5173)
+
+2️⃣ ОТРИМАТИ TELEGRAM BOT TOKEN:
+   - Напиши @BotFather в Telegram
+   - Команда: /newbot
+   - Скопіюй TOKEN
+   - Вставь у .env: TELEGRAM_BOT_TOKEN=YOUR_TOKEN
+
+3️⃣ ДЕПЛОЙ:
+   - Railway для API (api-server.js)
+   - Vercel для Frontend (src/)
+   - Railway для Bot (telegram-bot.js - запуститься автоматично)
+
+═══════════════════════════════════════════════════════════════
+
+🚀 ШВИДКИЙ КОМАНДИ:
+
+npm install         ← Встановити залежности
+npm start           ← Запустити API
+npm run dev         ← Запустити Frontend
+npm run bot         ← Запустити Bot
+npm run build       ← Зібрати фронтенд
+vercel              ← Деплой на Vercel
+railway deploy      ← Деплой на Railway
+
+═══════════════════════════════════════════════════════════════
+
+🎯 ГОТОВІ ЛІНКИ ПІСЛЯ ДЕПЛОЮ:
+
+🤖 Telegram Bot: @animeverse_your_name_bot
+🌐 Веб сайт: https://your-site.vercel.app
+📡 API: https://your-api.railway.app
+
+═══════════════════════════════════════════════════════════════
+
+✅ ГОТОВО! ЗАПУСКАЙ:
+
+1. npm install
+2. npm start
+3. npm run bot
+4. npm run dev
+
+Успіхів! 🚀✨
