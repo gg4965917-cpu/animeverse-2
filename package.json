@@ -1,0 +1,34 @@
+{
+  "name": "animeverse-backend",
+  "version": "1.0.0",
+  "description": "AnimeVerse API сервер з озвучкою та Telegram ботом",
+  "main": "api-server.js",
+  "scripts": {
+    "start": "node api-server.js",
+    "dev": "nodemon api-server.js",
+    "bot": "node telegram-bot.js",
+    "bot-dev": "nodemon telegram-bot.js"
+  },
+  "keywords": [
+    "anime",
+    "api",
+    "telegram",
+    "tts",
+    "voice"
+  ],
+  "author": "AnimeVerse",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
