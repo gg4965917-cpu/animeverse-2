@@ -1,0 +1,21 @@
+{
+  "build": {
+    "builder": "dockerfile",
+    "context": "."
+  },
+  "deploy": {
+    "startCommand": "node api-server.js",
+    "restartPolicyMaxRetries": 5,
+    "restartPolicyMaxRetryDelay": 300,
+    "healthcheck": {
+      "interval": 30,
+      "timeout": 10,
+      "retries": 3,
+      "startPeriod": 60
+    }
+  },
+  "environmentVariables": {
+    "PORT": "3000",
+    "NODE_ENV": "production"
+  }
+}
